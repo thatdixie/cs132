@@ -1,0 +1,56 @@
+Unix Programming Lecture 4 cont...
+
+
+ls revisited
+-a  displays hidden files that begin with (".")
+-F  appends a character indicating whether its a directory("/") or a file pointer/shortcut("@") or executable("*")(program that can be run)
+-R  recursively shows you subdirectories
+-d  displays information about the directory itself instead of its contents
+-l  long listing, displays 7 fields of information about a file
+    file mode, #of links, user, group, filesize, time and date last modified, name
+
+in UNIX the link of file is its name
+
+ln stands for link
+syntax) ln orig_file_name new_file_name
+
+byte, kilobyte, megabyte, gigabyte, terabyte, petabyte
+      1024 b    1024 kilo 1024 mega 1024 giga 1024 terabytes
+
+bit-smallest unit of data
+byte-smallest unit of storage
+
+-file mode-
+first character is file type followed by 9 characters describing the permissions for the file, defining who is allowed to do what to the file
+9 character permissions split into 3 3bits
+ugo
+user- operations owner can do
+group- everyone except the owner permissions
+others- everyone except owner or the group permissions
+
+rwx rwx rwx
+read write execute
+read- look but not modify
+write- you can modify
+execute- its a program that can be run
+
+touch
+ command was designed to update the time of last modification, making the file current(made dirty by touching it)
+
+file
+ command is useful for determining the type of the file
+
+df
+ command reports status of mounted file system(organized collection of units available for data connected to the single file hierarchy rooted at '/')and provides an easy way to check the amount of free space and capacity of all storage available on the UNIX system
+ list 6 fields
+  -name
+  -capacity
+  -used
+  -available
+  -percent of use
+  -pathname
+ mount point is the directory on which the file system is attached, on windows seperate disks are named like C: E: etc
+
+
+
+

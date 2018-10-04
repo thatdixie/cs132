@@ -1,0 +1,43 @@
+#!/bin/bash
+#############################################################
+# Checks user entered input of 3 positive whole numbers,    #
+# if they represent sides of a triangle, and if so outputs  #
+# the numbers and whether they are sides of an acute, a     #
+# right, or an obtuse triangle.                             #
+#                                                           #
+# Written by: Megan Williams on October 4, 2018             #
+#                                                           #
+# Usage: $0 $1 < $2 < $3, where arguments $1-$3 are         #
+#        ascending positive whole numbers                   #
+#############################################################
+# make sure there is a command line argument and 3 ascending positive integers:
+if [ $# -lt 1 -o $# -lt 3 ] || [ $1 -gt $2 ] || [ $2 -gt $3 ]
+then
+    echo "Usage: $0 <positive_integer> <larger_positive_integer> <largest_positive_integer>"
+    exit
+fi
+
+# copy command line values into variables
+let a=$1
+let b=$2
+let c=$3
+let a_plus_b=$a+$b
+let a_sqrd=$1*$1
+let b_sqrd=$2*$2
+let c_sqrd=$3*$3
+let asqrd_plus_bsqrd=$a_sqrd+$b_sqrd
+
+# check for triangle and type
+if [ $a_plus_b -le $c ]
+then
+    echo $1 "," $2 ", and" $3 "are NOT the sides of a triangle!"
+elif [ $a_plus_b -gt $c ] && [ $asqrd_plus_bsqrd -lt $c_sqrd ]
+then
+    echo $1 "," $2 ", and" $3 "are the sides of an obtuse triangle!"
+elif [ $a_plus_b -gt $c ] && [ $asqrd_plus_bsqrd -eq $c_sqrd ]
+then
+    echo $1 "," $2 ", and" $3 "are the sides of a right triangle!"
+else [ $a_plus_b -gt $c ] && [ $asqrd_plus_bsqrd -gt $c_sqrd ]
+    echo $1 "," $2 ", and" $3 "are the sides of an acute triangle!"
+    exit
+fi

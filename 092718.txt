@@ -1,0 +1,52 @@
+awk
+is an example of a filter-a program whose input is a text stream and whose output is a text stream.
+The program transforms the text.
+grep is a filter because it filters the lines that match the pattern that you give it
+
+awk can have an entire program it runs for the transformation
+all programs are a sequence of lines of pattern {action}
+awk 'pattern {action}'
+if you supply a pattern awk applies the action to the lines of the pattern
+if you dont supply a pattern awk applies the action to all lines
+
+addup.sh
+awk 'BEGIN {s=0}{s+= $'$1'} END {print s}  $1 will be the field number 
+
+s= s+ -everytime awk reads a line it will take the value of the field passed to it and add it to s and replace s then when finished reading all the lines, print the value of s
+
+awk when passed a string will try to convert it to a number
+
+aminoacidcheck.sh
+example of awk script with a 'pattern {action}'
+
+awk -F: ' $1 ~ /'$1'/ {print $2} ' $2   
+//white space around tokens for bash to not complain
+~ is a matching operator- string ~ /pattern/ if string matches the pattern it is true
+-F: field seperator is ':' break every line into fields seperated by :
+pattern- string to be checked is whatever is stored in field 1
+action- print out field 2
+program passed to awk is $1 ~ /Val/{print $2} will print Valine
+is case sensative
+
+put a command in backquotes? 
+
+print_csv_headings.sh
+awk -F, '
+{
+    if (FNR=1) //if i am on the first line
+        for (i=1; i<=NF; i++)
+	    printf "Field %d: \t%s\n" ,i,$1
+}' $1
+
+
+chmod
+changes permissions on a file 'change mode'
+syntax is chmod <user set> <modification operator> <permissions> <list of files>
+user set- user, group, other, all u,g,o,a
+modification operator- minus, add, equal(replace with what is given) +,-,=
+permissions- read, write, execute r,w,x
+ex) chmod 0=r <file>
+permissions go from permissive to constrictive as you go from user to group to others
+
+
+

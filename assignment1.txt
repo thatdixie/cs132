@@ -1,0 +1,40 @@
+CSI 132 Assignment 1   Megan Williams 09/05/18
+
+1. (4 pts) What was the name of the very first version of Ubuntu?
+
+	Ubuntu 4.10
+
+2. (4 pts) What made Ubuntu different from the commercial versions of Linux that existed before it?
+
+	Ubuntu was founded on the idea of a technological community and was developed to bring the Linux OS to all PC users instead of ONLY those administering servers. 
+
+3. (4 pts) Who was the founder of the company that created Ubuntu, and what is that company's name?
+
+	Mark R. Shuttleworth is the founder of Canonical Ltd, which is the company that developed the Ubuntu OS.
+
+5. (4 pts) Who is the founder of the Free Software Foundation and in what year was it founded?
+
+	Richard Stallman founded FSF on October 4th 1985
+
+6. (4 pts) Which of the following is the meaning of "free" in the context of free software?
+(a) The software will cost nothing to obtain.
+(b) The software can do as it pleases to a users system, accessing and changing all available data.
+X (C) THE USERS HAVE THE FREEDOM TO RUN, COPY, DISTRIBUTE, STUDY, CHANGE AND IMPROVE THE SOFTWARE.
+(d) The source code is free to those who have purchased the software.
+
+7. (4 pts) Which of the following is NOT an essential freedom according to the Free Software Foundation's
+definition of Free Software?
+(a) The freedom to run the program.
+(b) The freedom to see and study the program.
+(c) The freedom to share copies.
+X (D) THE FREEDOM TO OWN THE PROGRAM.
+(e) The freedom to share modified versions to others.
+
+8. (4 pts) Which of these is NOT a core principle of open source software, based on the Open-Source
+Initiative's definitions?
+(a) The program must include source code.
+(b) The license must allow people to experiment with and redistribute modifications.
+X (C) THE LICENSE MUST NOT ALLOW A USER TO SELL MODIFIED VERSIONS OF THE SOFTWARE.
+(d) Users have a right to know who is responsible for the software they are using.
+(e) The license must not restrict anyone from making use of the program in a specific field.
+(f) The license must not be specifc to a product.

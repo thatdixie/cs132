@@ -1,0 +1,36 @@
+#!/bin/bash
+#############################################################
+# Takes any number of words on the command line and checks  #
+# if each one is the username of a user in our Hunter       #
+# College network and then displays the username and the    #
+# full name associated with it.                             #
+#                                                           #
+# Written by: Megan Williams on October 4, 2018             #
+#                                                           #
+# Usage: $0 <username> ...                                  #
+#############################################################
+# make sure there is a command line argument 
+if [ $# -lt 1 ]
+then
+    echo "Usage: $0 <username_1> ... <username_n>"
+    exit
+fi
+
+# loop until all parameters are used up
+while [ "$#" -gt "0" ];
+do
+    ##############################################
+    # create a tempory file to hold grep results,#
+    # print full name(field 5) corresponding to  #
+    # username pattern(field 1) and shift $1     #
+    ##############################################
+    x="tempyp"
+    if ypcat passwd | grep $1 > $x; then
+       echo -n $1':'
+       awk -F: ' $1 ~ /'$1'/ {print $5} ' $x 
+       # shift all the parameters down by one
+        shift
+    fi
+    # remove temp file
+    rm $x
+done

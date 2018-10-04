@@ -1,0 +1,17 @@
+CSCI 132 2nd class
+login and password is called authentication
+$ represents the shell program waiting for you to tell it to do something
+it is user driven
+
+most powerful command - grep
+- global regular expression parser
+- takes a word to search from files
+
+man -k perl | grep tutorial
+man program sends output as input to grep program through a pipe
+
+who command displays info about who is currently logged in
+
+last lists last times for all logins since database was started
+
+alias allows you to rename a command  ie) alias woman=man

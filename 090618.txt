@@ -1,0 +1,53 @@
+Lecture 3 continued...  9/6/18
+
+grep- finds the word/s typed after
+
+pwd- present working directory
+
+mkdir- command makes a new directory in your current directory
+       if you specify pathname you can create elsewhere only if pathname exists already
+
+ls-R - recursively displays all files in the tree
+
+all commands display their output  on your terminal but you can redirect the output to file/device/input to another command using (">")
+
+cat- displays the contents of a file
+
+echo- prints the string that follows, echos words typed after it
+
+(">>")- append redirect operator, otherwise the single one will complain that you are overwriting a file if that file exists
+
+environment- customization of environment of bash, etc.., or the collection of environment variables and their values
+environment variables- configurable values in all caps
+
+printenv- prints variable names and their values
+
+env- works like printenv
+
+USER      user's username
+LOGNAME   user's username
+HOME      user's login or home directory
+PWD       present working directory
+SHELL     file name of user's shell
+PATH      sequence of directories searched by shell and other programs when you enter a command
+
+("$")- devalues the variable
+ex) echo HOME = HOME whereas echo $HOME = /home/megan/...
+
+Lecture 4
+
+Files- has two components, the contents and the properties
+     - contents are the data contained in the file
+     - properties are the metadata or characteristics of the file such as size, ownership, security tags and type
+
+flags accompanied with the command will specify such properties
+
+ls revisited!
+-l long listing- displays information in one line for each file or directory with all properites(7 columns)
+0-file mode
+1-# of links
+2-owner
+3-group
+4-size in bytes
+5-date of last modification
+6-name

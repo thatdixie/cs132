@@ -1,0 +1,46 @@
+Lecture 3 9/5/18 132
+
+Everything is a file! Simplifies the OS making it easy to maintain and extend
+
+UNIX file system hierarchy with root("/") at the top
+
+directories end with "/"
+shortcuts or symlinks end with "@"
+
+sub directories that exist on all systems underneath root:
+bin
+etc
+home
+usr
+dev
+lib
+
+/bin- originally stored all programs/commands/executable files/binaries
+bin is short for binaries
+/etc- created to store configuration files and miscellaneous stuff
+/dev- makes unix special and each file represents a physical or logical device
+/usr- contains executables
+/var- administrative files
+/lib- library files
+/tmp- temporary files
+/boot- contains startup files for operating system, kernels to be loaded
+/home-
+/proc-
+
+absolute pathname-starts with a forward slash and always begins with root
+relative pathname-starts with current or present working directory(PWD)- relative to where you are
+
+directory or 'folder' is a file with the structure of a table
+-each row represents a file called a directory entry composed of the name of the file and an index number for disc location
+
+hidden files begin with a dot(".") and contain configurations which is why the command ls ignores such files and therefore they are hidden to prevent unintentional modification
+
+./ current directory
+../ previous directory
+
+tab in bash will file out the name of directory if it exists for you
+
+
+
+
+

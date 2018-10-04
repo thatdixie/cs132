@@ -1,0 +1,13 @@
+Lecture 5 cont...
+
+Short intro to vi and gedit
+
+Two types of text editors
+text mode editors- run in terminal window
+graphical editors- with menus and mouse pointers
+
+vi, emacs, and pico are the three choices in LINUX
+
+
+
+went home early!
